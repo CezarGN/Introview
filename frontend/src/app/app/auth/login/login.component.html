@@ -1,0 +1,51 @@
+<!-- <form (ngSubmit)="onSubmit()"
+      [formGroup]="loginForm" xmlns="http://www.w3.org/1999/html">
+  <label for="username">
+    Username
+  </label>
+  <input formControlName="username" id="username">
+  <label for="password">
+    Password
+  </label>
+  <input formControlName="password" id="password">
+  <button type="submit">Login</button>
+  <p>Don't have an account? <a routerLink="/register">Sign Up.</a></p>
+</form> -->
+<div class="container">
+  <div class = "login">
+    <form [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()">
+      <mat-card class="shipping-card">
+        <mat-card-header>
+          <mat-card-title>Login</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="full-width">
+                <input matInput placeholder="Username" formControlName="username">
+                <mat-error *ngIf="loginForm.controls['username'].hasError('required')">
+                  Username is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="full-width">
+                <input matInput placeholder="Password" formControlName="password">
+                <mat-error *ngIf="loginForm.controls['password'].hasError('required')">
+                  Password is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-actions class = "actions">
+          <button mat-raised-button color="primary" type="submit">Submit</button>
+          <p>Don't have an account? <a routerLink="/register">Sign Up.</a></p>
+        </mat-card-actions>
+      </mat-card>
+    </form>
+  </div>  
+</div>
+

@@ -1,0 +1,27 @@
+.questions_container {
+    margin: 0 5% 0 5%;
+}
+
+.question_container {
+    padding: 1rem;
+    border: 1px solid black;
+    margin: 1rem 0 1rem 0;
+    border-radius: 16px;
+    background-color: #F5F5F5;
+}
+
+mat-card-actions{
+    display: flex;
+    justify-content: center;
+
+}
+
+mat-card-title{
+    text-align: center;
+    font-size: 30px;
+}
+
+mat-card-header{
+    justify-content: center;
+    display: flex;
+}

@@ -1,0 +1,16 @@
+<p>
+  <mat-toolbar class="toolbar">
+    <div class="menus">
+      <button class="menus__button" mat-button [routerLink]="['/quizes']">Quizzes</button>
+      <button class="menus__button" mat-button [routerLink]="['/interviews']">Interviews</button>
+      <button class="menus__button" mat-button [routerLink]="['/interviewers']">Interviewers</button>
+    </div>
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>settings</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="logout()">Log Out</button>
+    </mat-menu>
+  </mat-toolbar>
+</p>
+<router-outlet></router-outlet>

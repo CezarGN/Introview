@@ -1,0 +1,13 @@
+.menus {
+    width: 20vw;
+    display: flex;
+    justify-content: space-between;
+    &__button {
+        font-size: 3em;
+    }
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,38 @@
+<div class = "container">
+  <div class = "register">
+    <form [formGroup]="profileForm" novalidate (ngSubmit)="onSubmit()">
+      <mat-card class="shipping-card">
+        <mat-card-header>
+          <mat-card-title>Register</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="full-width">
+                <input matInput placeholder="Username" formControlName="username">
+                <mat-error *ngIf="profileForm.controls['username'].hasError('required')">
+                  Username is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="full-width">
+                <input matInput placeholder="Password" formControlName="password">
+                <mat-error *ngIf="profileForm.controls['password'].hasError('required')">
+                  Password is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-actions class = "actions">
+          <button mat-raised-button color="primary" type="submit">Submit</button>
+          <p>Already have an account? <a routerLink="/login">Sign In.</a></p>
+        </mat-card-actions>
+      </mat-card>
+    </form>
+  </div>
+</div>
+
